@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4810594C23BCA0AD00609F9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4810594B23BCA0AD00609F9E /* AppDelegate.swift */; };
-		4810594E23BCA0AD00609F9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4810594D23BCA0AD00609F9E /* ViewController.swift */; };
 		4810595123BCA0AD00609F9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4810594F23BCA0AD00609F9E /* Main.storyboard */; };
 		4810595423BCA0AD00609F9E /* TableViewTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4810595223BCA0AD00609F9E /* TableViewTest.xcdatamodeld */; };
 		4810595623BCA0AE00609F9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4810595523BCA0AE00609F9E /* Assets.xcassets */; };
 		4810595923BCA0AE00609F9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4810595723BCA0AE00609F9E /* LaunchScreen.storyboard */; };
 		4810596423BCA0AE00609F9E /* TableViewTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4810596323BCA0AE00609F9E /* TableViewTestTests.swift */; };
+		4810596F23BCA10200609F9E /* VideoListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4810596E23BCA10200609F9E /* VideoListScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +29,6 @@
 /* Begin PBXFileReference section */
 		4810594823BCA0AD00609F9E /* TableViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4810594B23BCA0AD00609F9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4810594D23BCA0AD00609F9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4810595023BCA0AD00609F9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4810595323BCA0AD00609F9E /* TableViewTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TableViewTest.xcdatamodel; sourceTree = "<group>"; };
 		4810595523BCA0AE00609F9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		4810595F23BCA0AE00609F9E /* TableViewTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4810596323BCA0AE00609F9E /* TableViewTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTestTests.swift; sourceTree = "<group>"; };
 		4810596523BCA0AE00609F9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4810596E23BCA10200609F9E /* VideoListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				4810594B23BCA0AD00609F9E /* AppDelegate.swift */,
-				4810594D23BCA0AD00609F9E /* ViewController.swift */,
+				4810596E23BCA10200609F9E /* VideoListScreen.swift */,
 				4810594F23BCA0AD00609F9E /* Main.storyboard */,
 				4810595523BCA0AE00609F9E /* Assets.xcassets */,
 				4810595723BCA0AE00609F9E /* LaunchScreen.storyboard */,
@@ -200,8 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4810594E23BCA0AD00609F9E /* ViewController.swift in Sources */,
 				4810594C23BCA0AD00609F9E /* AppDelegate.swift in Sources */,
+				4810596F23BCA10200609F9E /* VideoListScreen.swift in Sources */,
 				4810595423BCA0AD00609F9E /* TableViewTest.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
