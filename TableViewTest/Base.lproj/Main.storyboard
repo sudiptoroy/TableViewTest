@@ -21,21 +21,48 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ljh-7J-8lV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" id="ljh-7J-8lV" customClass="VideoCell" customModule="TableViewTest" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ljh-7J-8lV" id="KNs-lQ-wAc">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NnH-Ed-fiY">
-                                                    <rect key="frame" x="15" y="9" width="128" height="71"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NnH-Ed-fiY">
+                                                    <rect key="frame" x="12" y="9" width="128" height="72"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="NnH-Ed-fiY" secondAttribute="height" multiplier="16:9" id="aQ4-m6-ekb"/>
+                                                        <constraint firstAttribute="width" constant="128" id="h2I-Vb-ODG"/>
+                                                    </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="u4j-B8-z9Z">
+                                                    <rect key="frame" x="152" y="32.5" width="196" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="2HR-R3-5yT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="u4j-B8-z9Z" secondAttribute="trailing" constant="12" id="05N-xx-Had"/>
+                                                <constraint firstItem="NnH-Ed-fiY" firstAttribute="leading" secondItem="KNs-lQ-wAc" secondAttribute="leading" constant="12" id="C6s-ll-hg4"/>
+                                                <constraint firstItem="NnH-Ed-fiY" firstAttribute="centerY" secondItem="KNs-lQ-wAc" secondAttribute="centerY" id="awK-25-wds"/>
+                                                <constraint firstItem="u4j-B8-z9Z" firstAttribute="leading" secondItem="NnH-Ed-fiY" secondAttribute="trailing" constant="12" id="iav-Q7-qd1"/>
+                                                <constraint firstItem="u4j-B8-z9Z" firstAttribute="centerY" secondItem="KNs-lQ-wAc" secondAttribute="centerY" id="ssL-bd-SxF"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="videoImageView" destination="NnH-Ed-fiY" id="CD9-HE-x4h"/>
+                                            <outlet property="videoTitleLabel" destination="u4j-B8-z9Z" id="loh-FZ-85d"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Pa6-Wu-0lW"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="6YT-ov-2bz"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -48,6 +75,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Vh9-Xd-JlY"/>
+                    <connections>
+                        <outlet property="tableView" destination="MSy-1A-iGA" id="qTj-d0-2aV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
