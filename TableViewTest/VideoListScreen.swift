@@ -74,5 +74,8 @@ extension VideoListScreen: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(videos[indexPath.row].title)
+    }
     
 }
