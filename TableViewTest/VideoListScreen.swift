@@ -76,6 +76,13 @@ extension VideoListScreen: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(videos[indexPath.row].title)
+        performSegue(withIdentifier: "showDetails", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? VideoDetailsController {
+            destination.video = videos[(tableView.indexPathForSelectedRow?.row)!]
+        }
     }
     
 }
